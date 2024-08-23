@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Firebase.Auth;
-using Intents;
 
 namespace stocklily.Services
 {
@@ -48,12 +47,12 @@ namespace stocklily.Services
         }
 
         // Get user information
-        public async Task<FirebaseAuthLink> GetUser(string token)
+        public async Task<User> GetUser(string token)
         {
             try
             {
-                var auth = await _authProvider.GetUserAsync(token);
-                return auth;
+                var user = await _authProvider.GetUserAsync(token);
+                return user;
             }
             catch (FirebaseAuthException ex)
             {

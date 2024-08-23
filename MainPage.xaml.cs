@@ -16,12 +16,17 @@ namespace stocklily
 
         private async void SignUpButton_Clicked(object sender, EventArgs e)
         {
-            string email = "user@example.com";
+            string email = "newuser2@example.com";
             string password = "password123";
 
             try
             {
                 var authLink = await _firebaseAuthService.SignUpWithEmailPassword(email, password);
+
+                // Access user from FirebaseAuthLink
+                var user = authLink.User;
+
+                // Output the new users email to console
                 Console.WriteLine($"User signed up: {authLink.User.Email}");
             }
             catch (Exception ex) 
@@ -32,7 +37,7 @@ namespace stocklily
 
         private async void SignInButton_Clicked(object sender, EventArgs e)
         {
-            string email = "user@example.com";
+            string email = "newuser2@example.com";
             string password = "password123";
 
             try
