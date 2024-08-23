@@ -4,18 +4,20 @@
              x:Class="stocklily.MainPage">
 
     <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-
-        <!-- Top-Right Buttons -->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="10" Padding="20" Spacing="20">
-            <Button Text="Login" />
-            <Button Text="Register" />
+        
+        <!-- Top Content -->
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="your_image.png" HeightRequest="100" WidthRequest="0" />
+            <Label Text="Welcome, please login" FontSize="Header" HorizontalOptions="Center" Margin="10"/>
+        </StackLayout>
+        
+        <!-- Center Buttons -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="100" Padding="20" Spacing="20">
+            <Button Text="Sign Up" Clicked="SignUpButton_Clicked"/>
+            <Button Text="Sign In" Clicked="SignInButton_Clicked"/>
         </StackLayout>
 
-        <!-- Center Content -->
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Image Source="your_image.png" HeightRequest="100" WidthRequest="100" />
-            <Label Text="STOCKLILY" FontSize="Header" HorizontalOptions="Center" Margin="10"/>
-        </StackLayout>
+
 
     </StackLayout>
 
